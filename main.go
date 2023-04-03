@@ -16,5 +16,6 @@ func main() {
 
 	//routes
 	routes.UserRoute(app)
+
 	app.Listen(":6000")
 }
