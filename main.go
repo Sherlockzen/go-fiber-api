@@ -17,5 +17,5 @@ func main() {
 	//routes
 	routes.UserRoute(app)
 
-	app.Listen(`0.0.0.0:$PORT`)
+	app.Listen(`0.0.0.0`)
 }
