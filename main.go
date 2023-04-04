@@ -3,6 +3,7 @@ package main
 import (
 	"go-fiber-api/configs"
 	"go-fiber-api/routes"
+	"os"
 
 	"github.com/gofiber/fiber/v2"
 )
@@ -17,5 +18,10 @@ func main() {
 	//routes
 	routes.UserRoute(app)
 
-	app.Listen("1.1.14.1:27027")
+	//start server
+	var port string
+	if port = os.Getenv("PORT"); port == "" {
+		port = "8080"
+	}
+	app.Listen(":" + port)
 }
