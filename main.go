@@ -17,5 +17,5 @@ func main() {
 	//routes
 	routes.UserRoute(app)
 
-	app.Listen("0.0.0.0:27027")
+	app.Listen("1.1.14.1:27027")
 }
